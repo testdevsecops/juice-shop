@@ -1,8 +1,7 @@
+
 import tarfile
 
-with tarfile.open("archive.tar", "r") as tar:
-    tar.extractall()
-
-with open("archive.tar", "r") as tar:
-    for member in tar.getmembers():
-        tar.extract(member)
+with tarfile.open('archive.zip') as tar:
+    #BAD : This could write any file on the filesystem.
+    for entry in tar:
+        tar.extract(entry, "/tmp/unpack/")
