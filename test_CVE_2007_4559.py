@@ -1,4 +1,4 @@
-
+# faulty code from CodeQL bad code sample
 import tarfile
 
 with tarfile.open('archive.zip') as tar:
