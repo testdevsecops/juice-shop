@@ -1,4 +1,4 @@
 import tarfile
 tar = tarfile.open("sample.tar.gz")
-tar.extractall()
+tarfile.extractall()
 tar.close()
