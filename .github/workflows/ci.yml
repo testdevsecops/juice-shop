@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Check out Git repository"
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f #v2: v2.3.4 available
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2: v2.3.4 available
       - name: "Use Node.js 16"
         uses: actions/setup-node@f1f314fca9dfce2769ece7d933488f076716723e #v1: v2.x available
         with:
@@ -54,7 +54,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: "Check out Git repository"
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f #v2: v2.3.4 available
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2: v2.3.4 available
       - name: "Use Node.js 16"
         uses: actions/setup-node@f1f314fca9dfce2769ece7d933488f076716723e #v1: v2.x available
         with:
@@ -74,7 +74,7 @@ jobs:
     steps:
       - name: "Check out Git repository"
         if: github.repository == 'juice-shop/juice-shop' || github.repository != 'juice-shop/juice-shop' && matrix.os == 'ubuntu-latest' && matrix.node-version == '14'
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f #v2: v2.3.4 available
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2: v2.3.4 available
       - name: "Use Node.js ${{ matrix.node-version }}"
         if: github.repository == 'juice-shop/juice-shop' || github.repository != 'juice-shop/juice-shop' && matrix.os == 'ubuntu-latest' && matrix.node-version == '14'
         uses: actions/setup-node@f1f314fca9dfce2769ece7d933488f076716723e #v1: v2.x available
@@ -135,7 +135,7 @@ jobs:
     if: github.repository == 'juice-shop/juice-shop'
     steps:
       - name: "Check out Git repository"
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f #v2: v2.3.4 available
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2: v2.3.4 available
       - name: "Use Node.js 16"
         uses: actions/setup-node@f1f314fca9dfce2769ece7d933488f076716723e #v1: v2.x available
         with:
@@ -161,7 +161,7 @@ jobs:
     if: github.repository == 'juice-shop/juice-shop'
     steps:
       - name: "Check out Git repository"
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f #v2: v2.3.4 available
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2: v2.3.4 available
       - name: "Use Node.js 16"
         uses: actions/setup-node@f1f314fca9dfce2769ece7d933488f076716723e #v1: v2.x available
         with:
@@ -183,7 +183,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Check out Git repository"
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f #v2: v2.3.4 available
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2: v2.3.4 available
       - name: "Use Node.js 16"
         uses: actions/setup-node@f1f314fca9dfce2769ece7d933488f076716723e #v1: v2.x available
         with:
@@ -217,7 +217,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Check out Git repository"
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f #v2: v2.3.4 available
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2: v2.3.4 available
       - name: "Execute smoke test on Docker"
         run: docker-compose -f docker-compose.test.yml up --exit-code-from sut
   docker:
@@ -226,7 +226,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Check out Git repository"
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f #v2: v2.3.4 available
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2: v2.3.4 available
       - name: "Set up QEMU"
         uses: docker/setup-qemu-action@27d0a4f181a40b142cce983c5393082c365d1480 #v1: V1.2.0 available
       - name: "Set up Docker Buildx"
@@ -275,7 +275,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Check out Git repository"
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f #v2: v2.3.4 available
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2: v2.3.4 available
       - name: "Set Heroku app & branch for ${{ github.ref }}"
         run: |
           if [ "$GITHUB_REF" == "refs/heads/master" ]; then
